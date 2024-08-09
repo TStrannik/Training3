@@ -15,6 +15,9 @@ public:
 	char*		 say_my_name();
 	float		 piNa(float n);
 
+	int Left;
+	int Top;
+
 private:
 	unsigned int id_   = 0;
 	char*		 name_ = "name_default";
@@ -30,7 +33,7 @@ unsigned int GavClass::get_id()			  {				return id_;		}
 float		 GavClass::piNa(float n)	  { return pi_ / n;				}
 char*		 GavClass::say_my_name() {
 	std::cout <<
-		"\tname: " << name_ << "\n" <<
+		"\tname: " << name_ << " #" << id_ << "\n"
 		"\tid: "   << id_ << "\n";
 	return name_;
 }

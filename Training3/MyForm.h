@@ -117,13 +117,28 @@ namespace Training3 {
 	
 
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-		std::cout << "\tHello, World!\n";
-
+		using namespace std;
+		
 		GavClass *obj_GC = new GavClass;
 		obj_GC->set_id(C); C++;
-		//obj_GC->set_name((strcat("Bulochka ", (char*)C)));
-		obj_GC->set_name("Bulochka #");
+		obj_GC->set_name("Bulochka");
+		
 		obj_GC->say_my_name();
+		cout << endl;
+
+
+		Windows::Forms::Label^ obj_lbl = gcnew Windows::Forms::Label;
+		//this->components->Add(obj_lbl);
+
+		//this->obj_lbl->Text = L"label1";
+		
+
+
+
+
+
+
+
 
 
 		/// Попробовать поместить этот класс в абстрактного родителя и деструктировать родителя
