@@ -1,3 +1,9 @@
+#include <iostream>
+#include "BaseClass.h"
+#include "GavClass.h"
+
+
+
 #pragma once
 
 namespace Training3 {
@@ -77,6 +83,7 @@ namespace Training3 {
 			this->label1->Size = System::Drawing::Size(106, 37);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"label1";
+			this->label1->Click += gcnew System::EventHandler(this, &MyForm::label1_Click);
 			// 
 			// MyForm
 			// 
@@ -87,15 +94,48 @@ namespace Training3 {
 			this->Controls->Add(this->button1);
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
+		
+
+
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
 
+	unsigned int C;
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->Left = 1920 - this->Width - 15;
+		C = 0;
+	}
+
+	
+
+	
+	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+		GavClass *arr_obj_BC = new GavClass;
+		C++;
+
+		std::cout <<
+			"\tHello, World! " << C << "\n";
+
+
+		/*arr_obj_BC[C].set_name(strcat("Bulochka ", (char*)C));
+		std::cout <<
+			"\tHello, World! " <<
+			arr_obj_BC[C].piNa(4) << 
+			"\n";*/
+
+
+		//obj_BC2.set_name("Bulochka");
+		//std::cout << "\tHello, World! " << obj_BC2.piNa(4) << "\n";
+
+	}
 
 	};
 }

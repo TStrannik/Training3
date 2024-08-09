@@ -1,6 +1,9 @@
 #include "MyForm.h"
 #include <Windows.h>
-#include <iostream>
+//#include <iostream>
+
+//#include "BaseClass.h"
+
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -10,13 +13,23 @@ using namespace System::Windows::Forms;
 
 
 void APPLICATION_START() {
+	using namespace std;
+
 	system("color 70");
-	std::cout << "\n APPLICATION START\n\n";
-	std::cout << "\tStatistic:\n\n";
+	cout << "\n APPLICATION START\n\n";
+	cout << "  Statistic:\n\n";
 
 	
+	/*BaseClass obj_BC;
+	obj_BC.set_name("Gavka");
+	cout << "\t" << obj_BC.piNa(3.0f) << endl;*/
 
-	std::cout << "\n\n";
+
+
+
+
+
+	cout << "\n\n";
 }
 void APPLICATION_FORM() {
 	Application::SetCompatibleTextRenderingDefault(false);
