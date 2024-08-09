@@ -116,25 +116,17 @@ namespace Training3 {
 
 	
 
-	
 	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-		GavClass *arr_obj_BC = new GavClass;
-		C++;
+		std::cout << "\tHello, World!\n";
 
-		std::cout <<
-			"\tHello, World! " << C << "\n";
-
-
-		/*arr_obj_BC[C].set_name(strcat("Bulochka ", (char*)C));
-		std::cout <<
-			"\tHello, World! " <<
-			arr_obj_BC[C].piNa(4) << 
-			"\n";*/
+		GavClass *obj_GC = new GavClass;
+		obj_GC->set_id(C); C++;
+		//obj_GC->set_name((strcat("Bulochka ", (char*)C)));
+		obj_GC->set_name("Bulochka #");
+		obj_GC->say_my_name();
 
 
-		//obj_BC2.set_name("Bulochka");
-		//std::cout << "\tHello, World! " << obj_BC2.piNa(4) << "\n";
-
+		/// Попробовать поместить этот класс в абстрактного родителя и деструктировать родителя
 	}
 
 	};

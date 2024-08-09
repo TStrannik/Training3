@@ -12,8 +12,8 @@ public:
 	float piNa(float n);
 
 private:
-	char* name		= "name_default";
-	const float pi_	= 3.1415;
+	char* name		 = "name_default";
+	const double pi_ = 3.1415;
 
 };
 
